@@ -1,12 +1,7 @@
 const URL="https://dogapi.dog/api/v2/breeds";
-
-
-const dogs= async () => {
-    let response=await fetch(URL)
-    console.log(response)
-    console.log(response.status)
-    let data= await response.json()
-    console.log(data)
-    console.log(data[4]);
+let funktion= async () => {
+    let dogs= await fetch(URL);
+    let dog= await dogs.json();
+    console.log(dog.data[0])
 }
-dogs()
+funktion()
